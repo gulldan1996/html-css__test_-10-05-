@@ -27,21 +27,25 @@ main .sport-list .sport-list__img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  transition: 1s linear;
+  transition: border-radius 1s;
 }
 main li {
   position: relative;
-  width: 220px;
-  height: 287px;
+  width: 200px;
+  height: 200px;
   margin-right: 30px;
+  margin-bottom: 71px;
   text-align: center;
+  transition: 1s linear;
 }
 main li .rank {
   position: absolute;
-  right: 20px;
+  right: 10px;
   top: 87px;
   width: 32px;
   height: 32px;
+  color: #8B0000;
+  font-size: 16px;
   background: #fff;
   border-radius: 50%;
   line-height: 32px;
@@ -58,27 +62,41 @@ main li p {
 main li .extra {
   display: none;
 }
+main li::after {
+  transition: background-color 1s linear;
+}
 main li:hover {
-  transform: scale(1.1);
   background-color: #eee;
   border-radius: 12px;
+  transform: scale(1.1);
   z-index: 2;
-  transition: 1s linear;
   cursor: pointer;
 }
 main li:hover .sport-list__img {
-  transform: scale(1);
-  border-radius: 60px;
-  padding-top: 10px;
+  border-radius: 25%;
 }
 main li:hover .extra {
   display: block;
+  transition: 1s linear;
 }
 main li:hover .sport {
   height: 23px;
 }
 main li:hover .pay {
-  font-family: Arial-normal, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+}
+main li:hover::after {
+  position: absolute;
+  content: "";
+  display: block;
+  background-color: #eee;
+  z-index: -1;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -70px;
+  border-radius: 12px;
 }
 
 @media (max-width: 980px) {
