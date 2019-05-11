@@ -14,7 +14,7 @@ body {
 }
 
 main {
-  width: 980px;
+  width: 890px;
   margin: 0 auto;
   .sport-list {
     display: flex;
@@ -36,7 +36,7 @@ main {
       margin-right: 30px;
       margin-bottom: 71px;
       text-align: center;
-      transition: 1s linear;
+      transition: 1s;
       .rank {
         position: absolute;
         right: 10px;
@@ -65,7 +65,7 @@ main {
       }
 
       &::after {
-        transition: background-color 1s linear;
+        transition: background-color 1s;
       }
 
       &:hover {
@@ -79,7 +79,7 @@ main {
         }
         .extra {
           display: block;
-          transition: 1s linear;
+          transition: 1s;
         }
         .sport {
           height: 23px;
@@ -106,7 +106,7 @@ main {
 
 @media (max-width: 980px) {
   main {
-    width: 470px;
+    width: 430px;
     li:nth-of-type(2n) {
       margin-right: 0;
     }
